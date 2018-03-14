@@ -1,9 +1,6 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
-# programs
-#alias subl='open -a "Sublime Text"'
-# also/or do this:
 if [ ! -d "$HOME/bin" ]; then
   mkdir ~/bin
 fi
@@ -11,8 +8,6 @@ fi
 if [[ -s $HOME/.rvm/scripts/rvm ]]; then
   source $HOME/.rvm/scripts/rvm;
 fi
-
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
