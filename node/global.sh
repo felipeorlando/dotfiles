@@ -4,9 +4,10 @@ source common/functions.sh
 if which node &> /dev/null; then
     msg_checking "node"
 else
-    msg_install "node" "npm install -g n"
-    npm install -g n
-    sudo n stable
+    msg_install "node" "nvm and create .nvm"
+    brew install nvm
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     echo "OK"
 fi
 

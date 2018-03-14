@@ -8,6 +8,10 @@ if [ ! -d "$HOME/bin" ]; then
   mkdir ~/bin
 fi
 
+if [[ -s $HOME/.rvm/scripts/rvm ]]; then
+  source $HOME/.rvm/scripts/rvm;
+fi
+
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 
 # Load the shell dotfiles, and then some:

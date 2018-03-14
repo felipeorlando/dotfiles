@@ -1,5 +1,16 @@
 source common/functions.sh
 
+
+# install rvm
+if which rvm &> /dev/null; then
+    msg_checking "rvm"
+else
+    msg_install "rvm"
+    curl -sSL https://get.rvm.io | bash -s -- --version 2.3.3
+    source $HOME/.rvm/scripts/rvm;
+    echo "rvm"
+fi
+
 # update gems
 if which gem &> /dev/null; then
     msg_checking "gem"
