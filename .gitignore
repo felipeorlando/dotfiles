@@ -1,0 +1,16 @@
+# Ignore backup directories created by install script
+.dotfiles_backup_*
+
+# Ignore temporary files
+*.tmp
+*.temp
+*~
+
+# Ignore system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
